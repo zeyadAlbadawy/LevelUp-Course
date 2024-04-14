@@ -13,10 +13,10 @@ int getIdx(vector<string> arr, string s, int start, int end) {
             while(true) {
                 if(leftMid < start && rightMid > end)
                   return -1;
-                else if(arr[rightMid] != "") {
+                else if(rightMid < end && arr[rightMid] != "") {
                     mid = rightMid;
                     break;
-                } else if(arr[leftMid] != "") {
+                } else if(leftMid > start && arr[leftMid] != "") {
                     mid = leftMid;
                     break;
                 }
