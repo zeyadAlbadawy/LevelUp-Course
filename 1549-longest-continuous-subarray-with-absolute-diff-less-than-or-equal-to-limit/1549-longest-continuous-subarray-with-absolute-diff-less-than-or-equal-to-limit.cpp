@@ -15,6 +15,7 @@ public:
             dec.push_back(nums[i]);
 
             while(dec.front() - inc.front() > limit) {
+                // Remove The Element Pushed to queue when the left is updated
                 if(dec.front() == nums[left])
                    dec.pop_front();
                 if(inc.front() == nums[left])
